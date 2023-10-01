@@ -1,0 +1,55 @@
+﻿
+@{
+    ViewBag.Title = "Registration";
+}
+<h2>Registration Page</h2>
+
+@*<h2>
+        @ViewBag.Uname
+        @ViewBag.Upass
+        @ViewBag.Uid
+        @ViewBag.Ugender
+        @ViewBag.Uprofession
+        @ViewBag.Uhobbies
+    </h2>*@
+
+@if (Model != null)
+{@Model.Username
+@Model.Password
+@Model.Id
+@Model.Gender
+@Model.Profession
+@Model.Hobbies
+}
+<form action="" method="post">
+    <input type="text" class="form-control" name="Username" placeholder="Username" />
+    <input type="password" class="form-control" name="Password" placeholder="Password" />
+    <input type="number" class="form-control" name="Id" placeholder="Id" /><br />
+
+    <label for="Gender">Gender:</label><br />
+    <input type="radio" id="Male" name="gender" value="Male">
+    <label for="Male">Male</label><br>
+    <input type="radio" id="Female" name="gender" value="Female">
+    <label for="Female">Female</label><br><br />
+
+    <label for="Profession">Profession:</label>
+    <select name="Profession" id="Profession">
+        <option value="Teacher">Teacher</option>
+        <option value="Student">Student</option>
+    </select>
+    <br /><br />
+    <label for="Hobbies">Hobbies:</label><br />
+    <input type="checkbox" id="Travelling" name="Hobbies" value="Travelling">
+    <label for="Travelling"> Travelling</label><br>
+
+    <input type="checkbox" id="Movies" name="Hobbies" value="Movies">
+    <label for="Movies">Movies</label><br>
+
+    <input type="checkbox" id="Playing" name="Hobbies" value="Playing">
+    <label for="Playing"> Playing</label><br>
+
+    <input type="checkbox" id="Reading" name="Hobbies" value="Reading">
+    <label for="Reading"> Reading </label><br><br />
+    <input type="submit" value="Registration" class="btn btn-danger" />
+</form>
+
